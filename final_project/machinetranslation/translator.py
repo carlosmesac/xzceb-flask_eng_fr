@@ -21,33 +21,33 @@ language_translator = LanguageTranslatorV3(
 language_translator.set_service_url(url)
 
 
-def english_to_french(englishText):
+def english_to_french(english_text):
     """
     This function translate from english to french
 
     Args:
-        englishText (_type_): english text to translate
+        english_text (_type_): english text to translate
 
     Returns:
         _type_: translated text
     """
     # write the code here
-    frenchText = language_translator.translate(
-        text=englishText, model_id='en-fr').get_result()
-    return frenchText['translations'][0]['translation']
+    french_text = language_translator.translate(
+        text=english_text, model_id='en-fr').get_result()
+    return french_text['translations'][0]['translation']
 
 
-def french_to_english(frenchText):
+def french_to_english(french_text):
     """
     This function translate from french to english
 
     Args:
-        frenchText (_type_): french text to translate
+        french_text (_type_): french text to translate
 
     Returns:
         _type_: translated text
     """
     # write the code here
-    englishText = language_translator.translate(
-        text=frenchText, model_id='fr-en').get_result()
-    return englishText['translations'][0]['translation']
+    english_text = language_translator.translate(
+        text=french_text, model_id='fr-en').get_result()
+    return english_text['translations'][0]['translation']
